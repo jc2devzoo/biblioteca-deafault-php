@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+cd "$(dirname "${BASH_SOURCE[0]}")/../biblioteca"
+
 if ! command -v composer >/dev/null 2>&1; then
   mkdir -p "$HOME/.local/bin"
   curl -sS https://getcomposer.org/installer | php -- --install-dir="$HOME/.local/bin" --filename=composer
